@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'joshdick/onedark.vim'
 Plug 'preservim/nerdtree'
+Plug 'vim-scripts/AutoClose'
 
 call plug#end()
 
