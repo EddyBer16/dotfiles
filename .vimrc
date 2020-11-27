@@ -1,9 +1,27 @@
-" Install Plugins
+" Adding YouCompleteMe with Vundle
+set nocompatible
+filetype off
+
+" Vundle settings
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'ycm-core/YouCompleteMe'
+
+call vundle#end()
+
+" Set HTML autocompletion
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+
+" Install Vim Plug Plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'joshdick/onedark.vim'
 Plug 'preservim/nerdtree'
 Plug 'vim-scripts/AutoClose'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
