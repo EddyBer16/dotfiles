@@ -7,6 +7,7 @@ Plug 'preservim/nerdtree'
 Plug 'vim-scripts/AutoClose'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'xavierd/clang_complete'
 
 call plug#end()
 
@@ -21,12 +22,15 @@ colorscheme onedark
 set number
 set cursorline
 
-" Airline custom statusline
+" Airline custom status line
 let g:airline_theme='fruit_punch'
 
 " Change between NERDTree and the editor
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 
-" Toogle NERDTree
-map <C-n> :NERDToggle<CR>
+" Toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+" Clang Settings
+let g:clang_library_path='/usr/lib/llvm-11/lib'
