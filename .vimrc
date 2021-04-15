@@ -10,6 +10,7 @@ Plug 'OmniSharp/omnisharp-vim'
 " Themes
 Plug 'joshdick/onedark.vim'
 Plug 'sainnhe/sonokai'
+Plug 'drewtempelmeyer/palenight.vim'
 
 " Files Navigation Bar
 Plug 'preservim/nerdtree'
@@ -29,7 +30,8 @@ call plug#end()
 " Global Vim Settings
 syntax on
 set tabstop=4
-colorscheme onedark
+set background=dark
+colorscheme palenight
 set number
 set cursorline
 
