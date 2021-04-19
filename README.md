@@ -1,5 +1,5 @@
-# My dotfiles
-Here are my personalized dotfiles
+# Eddy's dotfiles
+Here are my customized configs
 
 ## .vimrc
 
@@ -14,3 +14,6 @@ Here are my personalized dotfiles
     ```
     :CocInstall coc-emmet coc-clangd coc-tsserver
     ```
+
+### Preview
+![](./preview-vimrc.jpg)
