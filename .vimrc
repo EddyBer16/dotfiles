@@ -65,6 +65,3 @@ noremap <C-h> <C-w>h
 
 " Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
-
-" Clang Settings
-let g:clang_library_path='/usr/lib/llvm-11/lib'
