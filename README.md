@@ -17,3 +17,18 @@ Here are my customized configs
 
 ### Preview
 ![](./preview-vimrc.jpg)
+
+## .bashrc
+
+### Requirements
+- Download git files
+  ```
+   $ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+   $ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+  ```
+- Install [w3m](https://sourceforge.net/projects/w3m/) for web search from terminal
+  ```
+  $ sudo apt-get install w3m w3m-image
+  ```
+### Prompt Preview
+![](./preview-bashrc.jpg)
