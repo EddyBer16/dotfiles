@@ -8,11 +8,13 @@ Plug 'vim-scripts/AutoClose'
 Plug 'OmniSharp/omnisharp-vim'
 
 " Themes
-Plug 'joshdick/onedark.vim'
-Plug 'sainnhe/sonokai'
-Plug 'drewtempelmeyer/palenight.vim'
+Plug 'dracula/vim'
+" Other themes I like
+" joshdick/onedark.vim
+" sainhe/sonokai
+" drewtempelmeyer/palenigh.vim similar to onedark
 
-" Files Navigation Bar
+" NERDTree
 Plug 'preservim/nerdtree'
 
 " Status Bar
@@ -21,6 +23,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Syntax Highlighting
 Plug 'sheerun/vim-polyglot'
+Plug 'EddyBer16/pseint.vim' " My own plugin for PSeInt Files
 
 " Wakatime
 Plug 'wakatime/vim-wakatime'
@@ -29,14 +32,28 @@ call plug#end()
 
 " Global Vim Settings
 syntax on
-set tabstop=4
-set background=dark
-colorscheme palenight
-set number
-set cursorline
+set smartindent
+colorscheme dracula
+set shiftwidth=2 " Number of spaces when shift identing
+set tabstop=2 " Number of visual spaces per tab
+set number " Show line numbers
+set cursorline " Highlight current line
+set showmatch " Highlight matching [{()}]
+set incsearch " Search as characters are entered
+set hlsearch " Highlight matches
+set wildignore+=*/tmpt/*,*.so,*.swp,*.zip,*/node_modules/*
+set noswapfile
 
-" Airline custom status line
+" Airline
 let g:airline_theme='fruit_punch'
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#branch#enabled = 1
+let g:airline_left_sep = '  🦄  '
+let g:airline_right_sep = '  🍕  '
+let g:airline_section_warning = ''
+let g:airline_section_y = ''
+let g:airline_section_x = ''
+set laststatus=2
 
 " Open NERDTree automatically
 autocmd StdinReadPre * let s:std_in=1
@@ -51,7 +68,3 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Clang Settings
 let g:clang_library_path='/usr/lib/llvm-11/lib'
-
-" Toogle OmniSharp
-inoremap <expr> <Tab> pumvisible() ? '<C-n>' :
-\       getline('.')[col('.')-2] =~# '[[:alnum:].-_#$]' ? '<C-x><C-o>' : '<Tab>'
