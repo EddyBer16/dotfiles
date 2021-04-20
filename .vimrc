@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 " Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'kiteco/vim-plugin'
 Plug 'xavierd/clang_complete'
 Plug 'vim-scripts/AutoClose'
 Plug 'OmniSharp/omnisharp-vim'
@@ -65,3 +66,8 @@ noremap <C-h> <C-w>h
 
 " Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
+
+" Kite Settings
+" JavaScript completion is not supported in kite for vim yet
+" So I'm using coc-tsserver
+let g:kite_supported_languages = ['python']
