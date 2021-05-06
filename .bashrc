@@ -63,3 +63,13 @@ DUCKDUCKGO="duckduckgo.com/"
 WIKIPEDIA="es.wikipedia.org/wiki/"
 alias ddg='w3m $DUCKDUCKGO'
 alias wikip='w3m $WIKIPEDIA'
+
+# PSEINT CONFIG
+# We use pseint in my high school, so I decided to use vim
+# to edit and run files in terminal
+# Instead of opening the gui
+PSEINT_PATH='/mnt/c/Program\ Files\ \(x86\)/PSeInt/pseint.exe'
+PSEINT_ARGS='--color --nouser'
+# In class we use the FIME_UANL profile for PSeInt
+PSEINT_PROFILE='--allow_dinamic_dimensions=0 --use_nassi_schneiderman=0 --force_define_vars=1 --allow_concatenation=0 --enable_string_functions=1 --enable_user_functions=1 --force_dot_and_comma=1 --allow_word_operators=0 --overload_equal=1 --coloquial_conditions=0 --lazy_syntax=0 --base_zero_arrays=1'
+alias pseint="$PSEINT_PATH $PSEINT_ARGS $PSEINT_PROFILE"
