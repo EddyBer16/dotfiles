@@ -88,6 +88,10 @@ psdraw()
 }
 
 # C++ Dev for school
+# Add clangd to PATH for Vim
+# REPLACE <user> WITH YOUR USERNAME AND UPDATE THE VERSION NAME
+export PATH=$PATH:/home/<user>/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin
+
 cppcompile()
 {
   if [ -z $1 ]
