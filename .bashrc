@@ -73,3 +73,33 @@ PSEINT_ARGS='--color --nouser'
 # In class we use the FIME_UANL profile for PSeInt
 PSEINT_PROFILE='--allow_dinamic_dimensions=0 --use_nassi_schneiderman=0 --force_define_vars=1 --allow_concatenation=0 --enable_string_functions=1 --enable_user_functions=1 --force_dot_and_comma=1 --allow_word_operators=0 --overload_equal=1 --coloquial_conditions=0 --lazy_syntax=0 --base_zero_arrays=1'
 alias pseint="$PSEINT_PATH $PSEINT_ARGS $PSEINT_PROFILE"
+
+psdraw()
+{
+  if [ -z $1 ]
+  then
+    echo "File not specified"
+   else
+    file=$1
+    pseint $file --draw a.psd
+    eval $PSEINTDRAW_PATH a.psd
+    rm -r a.psd
+   fi
+}
+
+# C++ Dev for school
+cppcompile()
+{
+  if [ -z $1 ]
+  then
+    echo "File not specified"
+   else
+    file=$1
+    executable=$1
+    executable+=".exe"
+    
+    clear
+    g++ $file -o $executable
+    ./$executable
+   fi
+}
