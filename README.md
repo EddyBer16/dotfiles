@@ -6,7 +6,7 @@ Here are my customized configs
 ### Requirements
 - Install [vim-plug](https://github.com/junegunn/vim-plug)
   ```bash
-  $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   ```
 - Install [Kite for Vim](https://github.com/kiteco/vim-plugin)
@@ -28,12 +28,12 @@ Here are my customized configs
 ### Requirements
 - Download git files
   ```bash
-   $ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-   $ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+   curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+   curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
   ```
 - Install [w3m](https://sourceforge.net/projects/w3m/) for web search from terminal
   ```bash
-  $ sudo apt-get install w3m w3m-image
+  sudo apt-get install w3m w3m-image
   ```
 ### Prompt Preview
 ![](./preview-bashrc.jpg)
