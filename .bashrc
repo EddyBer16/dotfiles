@@ -92,14 +92,14 @@ psdraw()
 # REPLACE <user> WITH YOUR USERNAME AND UPDATE THE VERSION NAME
 export PATH=$PATH:/home/<user>/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin
 
-cppcompile()
+cppcr()
 {
   if [ -z $1 ]
   then
     echo "File not specified"
    else
     file=$1
-    executable=$1
+    executable=${$1::-3}
     executable+=".exe"
     
     clear
