@@ -99,7 +99,7 @@ cppcr()
     echo "File not specified"
    else
     file=$1
-    executable=${$1::-3}
+    eval executable=\${$1::-3}
     executable+=".exe"
     
     clear
