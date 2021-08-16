@@ -99,8 +99,8 @@ cppcr()
     echo "File not specified"
    else
     file=$1
-    eval executable=\${$1::-3}
-    executable+=".exe"
+    executable=${file::-3}
+    executable+="exe"
     
     clear
     g++ $file -o $executable
